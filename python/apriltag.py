@@ -163,7 +163,7 @@ argparse.ArgumentParser on which you have called add_arguments.
 # pylint: disable=R0913
 
     def __init__(self,
-                 families='tag36h11',
+                 families='tag16h5', #'tag36h11',
                  border=1,
                  nthreads=4,
                  quad_decimate=1.0,
@@ -190,10 +190,10 @@ argparse.ArgumentParser on which you have called add_arguments.
 
 def add_arguments(parser):
 
-    '''Add arguments to the given argparse.ArgumentParser object to enable
-passing in the resulting parsed arguments into the initializer for
-Detector.
-
+    '''
+    Add arguments to the given argparse.ArgumentParser object to enable
+    passing in the resulting parsed arguments into the initializer for
+    Detector.
     '''
 
     defaults = DetectorOptions()
@@ -242,9 +242,11 @@ Detector.
 
 class Detector(object):
 
-    '''Pythonic wrapper for apriltag_detector. Initialize by passing in
-the output of an argparse.ArgumentParser on which you have called
-add_arguments; or an instance of the DetectorOptions class.'''
+    '''
+    Pythonic wrapper for apriltag_detector. Initialize by passing in
+    the output of an argparse.ArgumentParser on which you have called
+    add_arguments; or an instance of the DetectorOptions class.
+    '''
 
     def __init__(self, options=None):
 

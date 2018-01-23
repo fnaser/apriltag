@@ -22,6 +22,8 @@ def main():
     apriltag.add_arguments(parser)
 
     options = parser.parse_args()
+    
+    print(options)
 
     try:
         cap = cv2.VideoCapture(int(options.device_or_movie))
