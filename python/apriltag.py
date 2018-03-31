@@ -373,7 +373,7 @@ image of type numpy.uint8.'''
             family.contents.border = self.options.border
             self.libc.apriltag_detector_add_family(self.tag_detector, family)
         else:
-            print 'Unrecognized tag family name. Try e.g. tag36h11'
+            print('Unrecognized tag family name. Try e.g. tag36h11')
 
     def _vis_detections(self, shape, detections):
 
@@ -455,13 +455,13 @@ def main():
         detections, dimg = det.detect(gray, return_image=True)
 
         num_detections = len(detections)
-        print 'Detected {} tags.\n'.format(num_detections)
+        print('Detected {} tags.\n'.format(num_detections))
 
         for i, detection in enumerate(detections):
-            print 'Detection {} of {}:'.format(i+1, num_detections)
-            print
-            print detection.tostring(indent=2)
-            print
+            print('Detection {} of {}:'.format(i+1, num_detections))
+            print()
+            print(detection.tostring(indent=2))
+            print()
 
         if len(orig.shape) == 3:
             overlay = orig / 2 + dimg[:, :, None] / 2
